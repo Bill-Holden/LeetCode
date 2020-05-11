@@ -1,21 +1,46 @@
 ﻿using System;
 using Decompress;
 using StringCompression;
+using System.Collections.Generic;
 using Program;
+
 
 
 namespace DefangIP
 {
-
+    
     public static class Solution
     {
 
         public static void Main()
         {
+            string[] transactions = { "bob,627,1973,amsterdam","alex,387,885,bangkok","alex,355,1029,barcelona","alex,587,402,bangkok","chalicefy,973,830,barcelona","alex,932,86,bangkok","bob,188,989,amsterdam"   };
+            int[] test = { 0, 1, 2, 3, 4, 5, 6, 0, 1 };
+            int[] test2 = { 1, 3, 5, 2 };
+            string[] tests = { "bella", "label", "roller" };
+            string input2 = "10#11#12";
 
-            int response = ReduceToZero.NumberOfSteps(14);
+            string something = Program.Mapping.FreqAlphabets(input2);
 
-            response = Max69.Maximum69Number(9669);
+            Ranks instanceOfRanks = new Ranks();
+            string[] medals = instanceOfRanks.FindRelativeRanks(test2);
+            
+            
+            int response4 = WordLength.LengthOfLastWord("b   a    ");
+            IList<int> response2 = Program.SelfDivide.SelfDividingNumbers(1, 22);
+
+            IList<string> transactionsResponse = Program.Invalid.InvalidTransactions(transactions);
+            int[] response = ArrayIntersect.Intersect(test, test2);
+            response = ArrayParity.SortArrayByParity(test);
+
+            IList<int> smallAnswer = Smaller.CountSmaller(test);
+
+            IList <string> answers = Common.GetValues(tests);
+            int [] answer = Smaller.SmallerNumbersThanCurrent(test);
+
+           // int response = ReduceToZero.NumberOfSteps(14);
+
+            //response = Max69.Maximum69Number(9669);
 
             ListNode head = new ListNode(1);
             ListNode second = new ListNode(0);
